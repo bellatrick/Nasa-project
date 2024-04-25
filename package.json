@@ -1,0 +1,20 @@
+{
+  "name": "node_tut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch":"npm run server && npm run client",
+    "server": "cmd /k npm run watch --prefix server",
+    "client": "cmd /k npm start --prefix client",
+    "deploy":"npm run build --prefix client && npm start --prefix server",
+    "deploy-cluster":"npm run build --prefix client && npm run cluster --prefix server",
+    "install-server":"npm install --prefix server",
+    "install-client":"npm install --prefix client",
+    "install":"npm run install-server && npm run install-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
